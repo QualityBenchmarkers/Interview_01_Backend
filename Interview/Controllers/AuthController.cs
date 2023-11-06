@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Interview.Database.Configuration.ConfigurationTypes;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 using ToTo.Application.Services.AuthServices;
 
 namespace Interview.Controllers
@@ -8,10 +10,12 @@ namespace Interview.Controllers
     public class AuthController : ControllerBase
     {
         private AuthService _authService;
+        private LoginCredentialConfiguration _loginConfiguration;
 
-        public AuthController(AuthService authService)
+        public AuthController(AuthService authService , IOptions<LoginCredentialConfiguration> loginConfiguration)
         {
             _authService = authService;
+            _loginConfiguration = loginConfiguration.Value;
 
         }
 
@@ -21,7 +25,7 @@ namespace Interview.Controllers
         public async Task<ActionResult<object>> Login(AuthProperties authInfo)
         {
 
-            if (authInfo.Username != "pantea" || authInfo.Password != "dev123456789")
+            if (authInfo.Username != _loginConfiguration.UserName || authInfo.Password != _loginConfiguration.Password)
             {
                 return Unauthorized(new
                 {

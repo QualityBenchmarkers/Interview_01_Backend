@@ -1,6 +1,7 @@
 
 
 using Interview.Database.Configuration;
+using Interview.Database.Configuration.ConfigurationTypes;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
@@ -23,6 +24,8 @@ namespace Interview
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.Configure<LoginCredentialConfiguration>(builder.Configuration.GetSection(nameof(LoginCredentialConfiguration)));
 
 
 
