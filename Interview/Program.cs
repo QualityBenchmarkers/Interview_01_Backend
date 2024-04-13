@@ -2,6 +2,8 @@
 
 using Interview.Database.Configuration;
 using Interview.Database.Configuration.ConfigurationTypes;
+using Interview.Utilities.FakeGenerators;
+
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
@@ -30,6 +32,7 @@ namespace Interview
 
 
             builder.Services.AddScoped<AuthService>();
+            builder.Services.AddScoped<QuestionnaireGenerator>();
 
             builder.Services.AddDbContext<CommandCenterContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("CommandCenter")));
