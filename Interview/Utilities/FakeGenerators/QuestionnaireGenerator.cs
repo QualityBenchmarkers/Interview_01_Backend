@@ -61,6 +61,7 @@ namespace Interview.Utilities.FakeGenerators
             new Question()
             {
                 Id = questionIds[0],
+                QuestionNumber = 1,
                 IsVisible = true,
                 Caption = "شهر محل سکونت را انتخاب کنید.",
                 QuestionType = QuestionType.Checkbox,
@@ -95,6 +96,7 @@ namespace Interview.Utilities.FakeGenerators
             new Question()
             {
                 Id = questionIds[1],
+                QuestionNumber = 2,
                 IsVisible = true,
                 Caption = "استان محل سکونت را انتخاب کنید.",
                 QuestionType = QuestionType.Checkbox,
@@ -134,6 +136,7 @@ namespace Interview.Utilities.FakeGenerators
             new Question()
             {
                 Id = questionIds[2],
+                QuestionNumber = 3,
                 IsVisible = true,
                 Caption = "پایتخت  ایران چه شهری است",
                 QuestionType = QuestionType.Checkbox,
@@ -152,9 +155,20 @@ namespace Interview.Utilities.FakeGenerators
             new Question()
             {
                 Id = questionIds[3],
+                QuestionNumber = 4,
                 IsVisible = true,
                 QuestionType = QuestionType.SimpleText,
                 Caption = "دلیل مراجعه شما به نمایندگی چه بوده؟",
+                Choices = new List<Choice>()
+                {
+                new Choice()
+                 {
+                   Caption = "گزینه یک",
+                   Id = random.Next() %100,
+                   DeleteQuestionIds= "",
+                   Value = "",
+                 },
+                }
             });
 
 
@@ -163,9 +177,20 @@ namespace Interview.Utilities.FakeGenerators
             new Question()
             {
                 Id = questionIds[4],
+                QuestionNumber = 5,
                 IsVisible = true,
                 QuestionType = QuestionType.SimpleText,
                 Caption = "دلیل مراجعه شما به نمایندگی چه بوده؟",
+                Choices = new List<Choice>()
+                {
+                new Choice()
+                {
+                    Caption = "",
+                    Id = random.Next() %100,
+                    DeleteQuestionIds= "",
+                    Value = "",
+                },
+                }
             });
 
 
