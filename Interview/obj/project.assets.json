@@ -3102,19 +3102,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\m.mohamadi\\.nuget\\packages\\": {}
+    "C:\\Users\\r.yari\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Project\\Interview\\Interview_01_Backend\\Interview\\Interview.csproj",
+      "projectUniqueName": "F:\\RezaYari\\QB\\Projects\\Interview\\Interview\\Interview.csproj",
       "projectName": "Interview",
-      "projectPath": "D:\\Project\\Interview\\Interview_01_Backend\\Interview\\Interview.csproj",
-      "packagesPath": "C:\\Users\\m.mohamadi\\.nuget\\packages\\",
-      "outputPath": "D:\\Project\\Interview\\Interview_01_Backend\\Interview\\obj\\",
+      "projectPath": "F:\\RezaYari\\QB\\Projects\\Interview\\Interview\\Interview.csproj",
+      "packagesPath": "C:\\Users\\r.yari\\.nuget\\packages\\",
+      "outputPath": "F:\\RezaYari\\QB\\Projects\\Interview\\Interview\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\m.mohamadi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\r.yari\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3134,11 +3134,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -3185,7 +3180,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

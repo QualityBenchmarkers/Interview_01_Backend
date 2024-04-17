@@ -2,22 +2,21 @@ using Interview.Database.Configuration;
 using Interview.Database.Entities.Base;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
 namespace Interview.Controllers
 {
-    [ApiController]
-    [Route("[controller]")]
-    [Authorize]
-    public class CityAndProvinceController : ControllerBase
+    //[ApiController]
+    //[Route("[controller]")]
+    //[Authorize]
+    public class CityAndProvince // : ControllerBase
     {
 
 
-        private readonly ILogger<CityAndProvinceController> _logger;
+        private readonly ILogger<CityAndProvince> _logger;
         private readonly CommandCenterContext _context;
 
-        public CityAndProvinceController(ILogger<CityAndProvinceController> logger , CommandCenterContext context)
+        public CityAndProvince(ILogger<CityAndProvince> logger , CommandCenterContext context)
         {
             _logger = logger;
             _context = context;

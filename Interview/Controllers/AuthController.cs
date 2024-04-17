@@ -25,7 +25,7 @@ namespace Interview.Controllers
         public async Task<ActionResult<object>> Login(AuthProperties authInfo)
         {
 
-            if (authInfo.Username != _loginConfiguration.UserName || authInfo.Password != _loginConfiguration.Password)
+            if (authInfo.Username?.ToLower() != _loginConfiguration.UserName || authInfo.Password != _loginConfiguration.Password)
             {
                 return Unauthorized(new
                 {
