@@ -5,6 +5,6 @@
         public long Id { get; set; }
         public string DeleteQuestionIds { get; set; } = "";
         public string? Caption { get; set; }
-        public string Value { get; set; } = string.Empty;
+        public string? Value { get; set; }
     }
 }

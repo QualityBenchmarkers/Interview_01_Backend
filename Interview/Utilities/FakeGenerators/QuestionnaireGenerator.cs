@@ -72,21 +72,18 @@ namespace Interview.Utilities.FakeGenerators
                        Caption = "گزینه یک",
                        Id = random.Next() %100,
                        DeleteQuestionIds= "",
-                       Value = "",
                    },
                    new Choice()
                    {
                        Caption = "گزینه دو",
                        Id = random.Next() %100,
                        DeleteQuestionIds= "",
-                       Value = "",
                    },
                    new Choice()
                    {
                        Caption = "حذف سوال دو و سه",
                        Id = random.Next() %100,
                        DeleteQuestionIds = string.Join(",", questionIds.Take(1..3)),
-                       Value = "",
                    }
                 }
             });
@@ -107,21 +104,18 @@ namespace Interview.Utilities.FakeGenerators
                        Caption = "گزینه یک",
                        Id = random.Next() %100,
                        DeleteQuestionIds= "",
-                       Value = "",
                    },
                    new Choice()
                    {
                        Caption = "گزینه دو",
                        Id = random.Next() %100,
                        DeleteQuestionIds= "",
-                       Value = "",
                    },
                    new Choice()
                    {
                        Caption = "حذف سوال چهار",
                        Id = random.Next() %100,
                        DeleteQuestionIds = questionIds[3].ToString(),
-                       Value = "",
                    }
                 }
             });
@@ -166,7 +160,6 @@ namespace Interview.Utilities.FakeGenerators
                    Caption = "گزینه یک",
                    Id = random.Next() %100,
                    DeleteQuestionIds= "",
-                   Value = "",
                  },
                 }
             });
@@ -188,7 +181,6 @@ namespace Interview.Utilities.FakeGenerators
                     Caption = "",
                     Id = random.Next() %100,
                     DeleteQuestionIds= "",
-                    Value = "",
                 },
                 }
             });
