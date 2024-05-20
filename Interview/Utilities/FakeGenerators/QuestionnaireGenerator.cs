@@ -32,38 +32,12 @@ namespace Interview.Utilities.FakeGenerators
             questionnaire.Id = random.Next() % 100;
             questionnaire.Title = "پرسشنامه";
 
-            //List<Choice> cities = _context.Cities.Select(x => new Choice() { Id = x.Id, Caption = x.Name }).ToList();
-            //List<Choice> provinces = _context.Provinces.Select(x => new Choice() { Id = x.Id, Caption = x.Name }).ToList();
-
-
-            //questionnaire.Questions.Add(
-            //new Question()
-            //{
-            //    Id = questionIds[1],
-            //    IsVisible = true,
-            //    Caption = "استان محل سکونت را انتخاب کنید.",
-            //    QuestionType = QuestionType.SingleSelectDropDown,
-            //    Choices = provinces,
-
-            //});
-
-            //questionnaire.Questions.Add(
-            //new Question()
-            //{
-            //    Id = questionIds[2],
-            //    IsVisible = true,
-            //    Caption = "شهر محل سکونت را انتخاب کنید.",
-            //    QuestionType = QuestionType.SingleSelectDropDown,
-            //    Choices = cities
-            //}); 
-
             questionnaire.Questions.Add(
             new Question()
             {
                 Id = questionIds[0],
                 QuestionNumber = 1,
-                IsVisible = true,
-                Caption = "شهر محل سکونت را انتخاب کنید.",
+                Caption = "یک یا چند تا از گزینه های زیر رو انتخاب کنید؟ تست 1",
                 QuestionType = QuestionType.Checkbox,
                 Choices = new List<Choice>()
                 {
@@ -71,19 +45,16 @@ namespace Interview.Utilities.FakeGenerators
                    {
                        Caption = "گزینه یک",
                        Id = random.Next() %100,
-                       DeleteQuestionIds= "",
                    },
                    new Choice()
                    {
                        Caption = "گزینه دو",
                        Id = random.Next() %100,
-                       DeleteQuestionIds= "",
                    },
                    new Choice()
                    {
-                       Caption = "حذف سوال دو و سه",
+                       Caption = "گزینه 3",
                        Id = random.Next() %100,
-                       DeleteQuestionIds = string.Join(",", questionIds.Take(1..3)),
                    }
                 }
             });
@@ -94,8 +65,7 @@ namespace Interview.Utilities.FakeGenerators
             {
                 Id = questionIds[1],
                 QuestionNumber = 2,
-                IsVisible = true,
-                Caption = "استان محل سکونت را انتخاب کنید.",
+                Caption = "یک  یا چند گزینه از سوال های زیر را وارد انتخاب کنید؟  تست 2",
                 QuestionType = QuestionType.Checkbox,
                 Choices = new List<Choice>()
                 {
@@ -103,41 +73,17 @@ namespace Interview.Utilities.FakeGenerators
                    {
                        Caption = "گزینه یک",
                        Id = random.Next() %100,
-                       DeleteQuestionIds= "",
                    },
                    new Choice()
                    {
                        Caption = "گزینه دو",
                        Id = random.Next() %100,
-                       DeleteQuestionIds= "",
                    },
                    new Choice()
                    {
-                       Caption = "حذف سوال چهار",
+                       Caption = "گزینه سه",
                        Id = random.Next() %100,
-                       DeleteQuestionIds = questionIds[3].ToString(),
                    }
-                }
-            });
-
-
-
-
-
-
-
-            questionnaire.Questions.Add(
-            new Question()
-            {
-                Id = questionIds[2],
-                QuestionNumber = 3,
-                IsVisible = true,
-                Caption = "پایتخت  ایران چه شهری است",
-                QuestionType = QuestionType.Checkbox,
-                Choices = new List<Choice>()
-                {
-                  new Choice() { Id = random.Next() % 100 , Caption = "تهران" },
-                  new Choice() { Id = random.Next() % 100 , Caption = "حذف سوال پنج" , DeleteQuestionIds = questionIds[4].ToString()  }
                 }
             });
 
@@ -149,8 +95,7 @@ namespace Interview.Utilities.FakeGenerators
             new Question()
             {
                 Id = questionIds[3],
-                QuestionNumber = 4,
-                IsVisible = true,
+                QuestionNumber = 3,
                 QuestionType = QuestionType.SimpleText,
                 Caption = "دلیل مراجعه شما به نمایندگی چه بوده؟",
                 Choices = new List<Choice>()
@@ -159,7 +104,6 @@ namespace Interview.Utilities.FakeGenerators
                  {
                    Caption = "گزینه یک",
                    Id = random.Next() %100,
-                   DeleteQuestionIds= "",
                  },
                 }
             });
@@ -170,17 +114,15 @@ namespace Interview.Utilities.FakeGenerators
             new Question()
             {
                 Id = questionIds[4],
-                QuestionNumber = 5,
-                IsVisible = true,
-                QuestionType = QuestionType.SimpleText,
-                Caption = "دلیل مراجعه شما به نمایندگی چه بوده؟",
+                QuestionNumber = 4,
+                QuestionType = QuestionType.PhoneNumber,
+                Caption = "شماره تلفن خود را وارد کنید؟",
                 Choices = new List<Choice>()
                 {
                 new Choice()
                 {
                     Caption = "",
                     Id = random.Next() %100,
-                    DeleteQuestionIds= "",
                 },
                 }
             });
