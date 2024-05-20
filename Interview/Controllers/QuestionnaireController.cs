@@ -25,6 +25,7 @@ namespace Interview.Controllers
         }
 
         [HttpGet("GetQuestionnaire")]
+        [AllowAnonymous]
         public ActionResult<Questionnaire> GetQuestionnaire()
         {
             Questionnaire questionnaire = _questionnaireGenerator.CreateFakeQuestionnaire();

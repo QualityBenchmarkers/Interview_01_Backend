@@ -7,7 +7,6 @@ namespace Interview.Models
         public long Id { get; set; }
 
         public int QuestionNumber { get; set; }
-        public bool IsVisible { get; set; }
 
         public string? Caption { get; set; }
         public QuestionType QuestionType { get; set; }
